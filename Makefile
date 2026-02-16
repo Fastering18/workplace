@@ -8,8 +8,5 @@ SRCS = $(shell find . -name '.ccls-cache' -type d -prune -o -type f -name '*.cpp
 main: $(SRCS)
 	$(CXX) $(CXXFLAGS) $(SRCS) -o "$@"
 
-main-debug: $(SRCS)
-	$(CXX) $(CXXFLAGS) -O0 $(SRCS) -o "$@"
-
 clean:
-	rm -f main main-debug
+	rm -f main
